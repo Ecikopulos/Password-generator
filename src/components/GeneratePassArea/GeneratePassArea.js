@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Wrapper } from "./GeneratePassArea.styles";
 import Slider from "../Slider/Slider";
 import CheckBoxesArea from "../CheckBoxesArea/CheckBoxesArea";
-import Button from "../Button/Button";
+import Generate from "../Generate/Generate";
 import PasswordStrengthArea from "../PasswordStrengthArea/PasswordStrengthArea";
 
 const GeneratePassArea = () => {
@@ -12,7 +12,7 @@ const GeneratePassArea = () => {
       <Slider />
       <CheckBoxesArea setPower={setPasswordPower} />
       <PasswordStrengthArea power={passwordPower} />
-      <Button />
+      <Generate />
     </Wrapper>
   );
 };
