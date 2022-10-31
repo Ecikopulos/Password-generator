@@ -30,11 +30,15 @@ export const Wrapper = styled.div`
     width: 28px;
     height: 28px;
     border-radius: 100%;
-    /* remove default outline when selected */
     outline: none;
   }
 
   .passLength-thumb:hover {
+    background: ${({ theme }) => theme.colors.black};
+    border: 2px solid ${({ theme }) => theme.colors.green};
+  }
+
+  .passLength-thumb:focus {
     background: ${({ theme }) => theme.colors.black};
     border: 2px solid ${({ theme }) => theme.colors.green};
   }

@@ -17,10 +17,23 @@ const PasswordArea = ({ password }) => {
     }, 1000);
   };
 
+  const copyPasswordKey = async (e) => {
+    if (e.key === " ") {
+      await navigator.clipboard.writeText(password);
+      setCopied(true);
+
+      clearTimeout(time);
+
+      time = setTimeout(() => {
+        setCopied(false);
+      }, 1000);
+    }
+  };
+
   return (
     <Wrapper>
       <PasswordText>{password}</PasswordText>
-      <Icon onClick={copyPassword} />
+      <Icon tabIndex="0" onClick={copyPassword} onKeyDown={copyPasswordKey} />
       <PopUp isCopied={copied}>Copied!</PopUp>
     </Wrapper>
   );
