@@ -1,11 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import ReactSlider from "react-slider";
 import { SliderValue, Text, TextArea, Wrapper } from "./Slider.styles";
-import { Context } from "../../assets/Context/Context";
 
-const Slider = () => {
-  const { currentValue, setCurrentValue } = useContext(Context);
-
+const Slider = ({ currentValue, setCurrentValue }) => {
   return (
     <Wrapper>
       <TextArea>

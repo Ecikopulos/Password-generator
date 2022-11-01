@@ -7,12 +7,33 @@ import PasswordStrengthArea from "../PasswordStrengthArea/PasswordStrengthArea";
 
 const GeneratePassArea = () => {
   const [passwordPower, setPasswordPower] = useState(0);
+  const [currentValue, setCurrentValue] = useState(10);
+  const [upperValue, setUpperValue] = useState(false);
+  const [lowerValue, setLowerValue] = useState(false);
+  const [numberValue, setNumberValue] = useState(false);
+  const [symbolValue, setSymbolValue] = useState(false);
   return (
     <Wrapper>
-      <Slider />
-      <CheckBoxesArea setPower={setPasswordPower} />
+      <Slider currentValue={currentValue} setCurrentValue={setCurrentValue} />
+      <CheckBoxesArea
+        setPower={setPasswordPower}
+        upperValue={upperValue}
+        setUpperValue={setUpperValue}
+        lowerValue={lowerValue}
+        setLowerValue={setLowerValue}
+        numberValue={numberValue}
+        setNumberValue={setNumberValue}
+        symbolValue={symbolValue}
+        setSymbolValue={setSymbolValue}
+      />
       <PasswordStrengthArea power={passwordPower} />
-      <Generate />
+      <Generate
+        upperValue={upperValue}
+        lowerValue={lowerValue}
+        numberValue={numberValue}
+        symbolValue={symbolValue}
+        currentValue={currentValue}
+      />
     </Wrapper>
   );
 };

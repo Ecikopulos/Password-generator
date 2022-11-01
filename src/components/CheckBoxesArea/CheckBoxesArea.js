@@ -1,20 +1,18 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Wrapper } from "./CheckBoxesArea.styles";
 import Checkbox from "../Checkbox/Checkbox";
-import { Context } from "../../assets/Context/Context";
 
-const CheckBoxesArea = ({ setPower }) => {
-  const {
-    upperValue,
-    setUpperValue,
-    lowerValue,
-    setLowerValue,
-    numberValue,
-    setNumberValue,
-    symbolValue,
-    setSymbolValue,
-  } = useContext(Context);
-
+const CheckBoxesArea = ({
+  setPower,
+  lowerValue,
+  setLowerValue,
+  upperValue,
+  setUpperValue,
+  numberValue,
+  setNumberValue,
+  symbolValue,
+  setSymbolValue,
+}) => {
   return (
     <Wrapper>
       <Checkbox

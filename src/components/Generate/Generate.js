@@ -9,15 +9,14 @@ const Allowed = {
   symbols: "!@#$%^&*()_+~`|}{[]\\:;?><,./-=",
 };
 
-const Generate = () => {
-  const {
-    currentValue,
-    upperValue,
-    lowerValue,
-    numberValue,
-    symbolValue,
-    setGeneratedPass,
-  } = useContext(Context);
+const Generate = ({
+  currentValue,
+  upperValue,
+  lowerValue,
+  numberValue,
+  symbolValue,
+}) => {
+  const { setGeneratedPass } = useContext(Context);
 
   const getRandomCharFromString = (str) =>
     str.charAt(Math.floor(Math.random() * str.length));
