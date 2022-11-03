@@ -22,7 +22,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   a, button {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     margin: 0;
     padding: 0;
   }
